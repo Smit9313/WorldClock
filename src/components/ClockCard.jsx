@@ -22,9 +22,9 @@ const ClockCard = ({ city, timeZone }) => {
   }, [timeZone]);
 
   return (
-    <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg w-64 text-center">
-      <h2 className="text-xl font-bold">{city}</h2>
-      <p className="text-2xl font-mono mt-2">{time}</p>
+    <div className="bg-gray-800 text-white p-6 rounded-lg shadow-md w-full sm:w-64 text-center transition duration-300 hover:shadow-lg">
+      <h2 className="text-xl font-semibold mb-2">{city}</h2>
+      <p className="text-3xl font-mono mt-2">{time}</p>
     </div>
   );
 };

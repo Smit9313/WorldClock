@@ -27,22 +27,22 @@ const ClockList = ({ layout }) => {
 
   return (
     <div
-      className={`flex flex-wrap mt-6 gap-4 ${
+      className={`mt-8 gap-6 ${
         layout === "grid"
           ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          : "flex-col"
+          : "flex flex-col items-center"
       }`}
     >
       {cities.map((city) => (
         <ClockCard key={city.city} city={city.city} timeZone={city.timeZone} />
       ))}
-      <div className="w-64">
+      <div className="w-full sm:w-64">
         <select
           onChange={(e) => {
             const selected = allCities.find((c) => c.city === e.target.value);
             if (selected) addCity(selected);
           }}
-          className="w-full p-2 border rounded-lg bg-gray-700 text-white"
+          className="w-full p-3 border border-gray-700 rounded-md bg-gray-800 text-white focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out"
         >
           <option value="">Add a City</option>
           {allCities

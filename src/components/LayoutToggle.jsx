@@ -1,10 +1,10 @@
 const LayoutToggle = ({ layout, setLayout }) => {
   return (
     <button
-      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition"
+      className="bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out font-medium"
       onClick={() => setLayout(layout === "grid" ? "stack" : "grid")}
     >
-      Toggle Layout: {layout === "grid" ? "Stacked" : "Grid"}
+      Change Layout: {layout === "grid" ? "Stacked" : "Grid"}
     </button>
   );
 };
